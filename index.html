@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Node JS</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+  <script src="assets/js/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="nav">
+    <div class="container">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </div>
+  <div class="header">
+    <div class="container">
+      <h1>Hello!!</h1>
+      <p>-Landing One Page-</p>
+      <a class="btn" href="#">Learn More</a>
+    </div>
+  </div>
+
+
+
+  <div class="main" id="home">
+    <div class="container">
+      <img src="assets/images/node-js-icon.png" alt="icon">
+      <h2>Node.JS For Live</h2>
+      <p>Node.js is an open-source, cross-platform JavaScript run-time environment for executing JavaScript code server-side.
+        Historically, JavaScript was used primarily for client-side scripting, in which scripts written in JavaScript are
+        embedded in a webpage's HTML, to be run client-side by a JavaScript engine in the user's web browser. Node.js enables
+        JavaScript to be used for server-side scripting, and runs scripts server-side to produce dynamic web page content
+        before the page is sent to the user's web browser. Consequently, Node.js has become one of the foundational elements
+        of the "JavaScript everywhere" paradigm,[5] allowing web application development to unify around a single programming
+        language, rather than rely on a different language for writing server side scripts.</p>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h2>Stay Calm</h2>
+      <p>Feel Bad? Node will help you wildest dream</p>
+      <a class="btn" href="#">Join</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <p>&copy; github.com/andreychuinx</p>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function () {
+      var stickyNavTop = $('.nav').offset().top;
+      var stickyNav = function () {
+        var scrollTop = $(window).scrollTop();
+  
+        if (scrollTop > stickyNavTop) {
+          $('.nav').css({ 'position': 'fixed', 'top': 0, 'left': 0, 'z-index': 9999 });
+        } else {
+          $('.nav').css({ 'position': 'absolute', 'top': -9999, 'left': -9999 });
+        }
+      };
+      stickyNav();
+      $(window).scroll(function () {
+        stickyNav();
+      });
+    });
+  </script>
+</body>
+
+
+</html>
